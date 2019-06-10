@@ -1,0 +1,31 @@
+#pragma once
+
+#include "IDerivedInterface.h"
+
+UCLASS()
+class UImplObj : public UObject, public IDerivedInterface
+{
+	GENERATED_BODY()
+
+public:
+	virtual void Test() override;
+	virtual void ConstTest() const override;
+
+	UFUNCTION(BlueprintCallable)
+	virtual void TestBP() override;
+
+	UFUNCTION(BlueprintCallable)
+	virtual void ConstTestBP() override;
+
+	UFUNCTION(BlueprintNativeEvent)
+	virtual void NativeEventTest() override;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	virtual void ImplementableEventTest() override;
+
+protected:	
+	virtual void ProtectedTest() override;
+
+private:
+	virtual void PrivateTest() override;
+};

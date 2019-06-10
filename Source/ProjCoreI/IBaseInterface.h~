@@ -1,0 +1,36 @@
+#pragma once
+
+#include "IBaseInterface.generated.h"
+
+UINTERFACE()
+class UBaseInterface : public UInterface
+{
+	GENERATED_BODY()
+};
+
+class IBaseInterface 
+{
+	GENERATED_BODY()
+
+public:
+	virtual void Test() =0;
+	virtual void ConstTest() const =0;
+
+	UFUNCTION(BlueprintCallable)
+	virtual void TestBP() =0;
+
+	UFUNCTION(BlueprintCallable)
+	virtual void ConstTestBP() =0;
+
+	UFUNCTION(BlueprintNativeEvent)
+	virtual void NativeEventTest() = 0;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	virtual void ImplementableEventTest() =0;
+
+protected:	
+	virtual void ProtectedTest() = 0;
+
+private:
+	virtual void PrivateTest() = 0;
+};

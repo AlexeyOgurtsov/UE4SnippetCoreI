@@ -1,0 +1,49 @@
+#include "ImplObj.h"
+#include "Logging/LogMacros.h"
+
+DEFINE_LOG_CATEGORY(MyILog, Display, All);
+
+
+void UImplObj::DerivedTest() 
+{
+	UE_LOG(MyILog, Display, TEXT("UImplObj::DerivedTest"));
+}
+
+void UImplObj::Test() 
+{
+	UE_LOG(MyILog, Display, TEXT("UImplObj::Test"));
+}
+
+void UImplObj::ConstTest() const 
+{
+	UE_LOG(MyILog, Display, TEXT("UImplObj::ConstTest"));
+}
+
+void UImplObj::TestBP() 
+{
+	UE_LOG(MyILog, Display, TEXT("UImplObj::TestBP"));
+}
+
+void UImplObj::ConstTestBP() 
+{
+	UE_LOG(MyILog, Display, TEXT("UImplObj::ConstTestBP"));
+}
+
+void UImplObj::NativeEventTest() 
+{
+	UE_LOG(MyILog, Display, TEXT("UImplObj::NativeEventTest"));
+}
+
+void UImplObj::ImplementableEventTest() 
+{
+	UE_LOG(MyILog, Display, TEXT("UImplObj::ImplementableEventTest"));
+}
+
+void UImplObj::ProtectedTest() 
+{
+	UE_LOG(MyILog, Display, TEXT("UImplObj::ProtectedTest"));
+}
+
+void UImplObj::PrivateTest() 
+{
+}

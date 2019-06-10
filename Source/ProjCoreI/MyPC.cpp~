@@ -1,0 +1,13 @@
+#include "MyPC.h"
+
+void AMyPC::BeginPlay()
+{
+	Obj = NewObject<UImplObj>(this, UImplObj::StaticClass());
+	Obj->DerivedTest_Execute();
+	Obj->Test_Execute();
+	Obj->ConstTest_Execute();
+	Obj->TestBP();
+	Obj->ConstTestBP();
+	Obj->NativeEventTest();
+	Obj->ImplementableEventTest();
+}
