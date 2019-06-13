@@ -4,7 +4,7 @@
 * Public interface of the save system (for calls from IMySaveable, for example).
 */
 #include "IMySaveable.h"
-//#include "UObject/ScriptInterface.h" // Include UObject/ScriptInterface does NOT solve the problem
+#include "UObject/ScriptInterface.h" // We Do NEED It
 #include "IMySaveLoadSystem.generated.h"
 
 class IMySaveableHandle;

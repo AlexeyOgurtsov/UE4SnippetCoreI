@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Kismet/BlueprintFunctionLibrary.h" // we DO need it (see my ue4 doc)
 #include "MyDebugMacros.h"
 #include "LogUtilLib.generated.h"
 

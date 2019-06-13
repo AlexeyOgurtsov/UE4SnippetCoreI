@@ -1,6 +1,7 @@
 #pragma once
 
 #include "IBaseInterface.h"
+#include "UObject/Interface.h"// We DO need it (see my UE4 build doc)
 #include "IDerivedInterface.generated.h"
 
 UINTERFACE()

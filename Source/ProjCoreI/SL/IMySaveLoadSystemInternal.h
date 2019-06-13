@@ -5,6 +5,7 @@
 */
 
 #include "IMySaveLoadSystem.h"
+#include "UObject/ScriptInterface.h" // We Do NEED It
 #include "IMySaveLoadSystemInternal.generated.h"
 
 UINTERFACE()

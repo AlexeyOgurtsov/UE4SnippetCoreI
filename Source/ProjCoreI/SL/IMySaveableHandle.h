@@ -4,6 +4,7 @@
 * Handle that each saveable object instance uses to interact with the save-load system.
 */
 
+#include "UObject/Interface.h"// We DO need it (see my UE4 build doc)
 #include "IMySaveableHandle.generated.h"
 
 class IMySaveable;
