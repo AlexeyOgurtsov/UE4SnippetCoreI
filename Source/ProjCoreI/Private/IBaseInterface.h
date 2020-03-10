@@ -19,7 +19,7 @@ struct FMyStruct
 	float Value = 0.0F;
 };
 
-UINTERFACE()
+UINTERFACE(BlueprintType)
 class UBaseInterface : public UInterface
 {
 	GENERATED_BODY()

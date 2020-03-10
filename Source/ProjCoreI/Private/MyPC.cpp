@@ -190,16 +190,16 @@ void AMyPC::Test_ImplementationsInInterface()
 {
 	UE_LOG(PCLog, Display, TEXT("AMyPC::Test_ImplementationsInInterface..."));
 	UImplObj* const MyImplObj = NewObject<UImplObj>(this, ObjClass);
-	IDerivedInterface* const Obj = MyImplObj;
+	IDerivedInterface* const ObjByIfc = MyImplObj;
 
 	{
-		int32 const GettedValue = Obj->TestHelper_GetValue();
-		UE_LOG(PCLog, Display, TEXT("Obj->TestHelper_GetValue() returned %d"), GettedValue);
+		int32 const GettedValue = ObjByIfc->TestHelper_GetValue();
+		UE_LOG(PCLog, Display, TEXT("ObjByIfc->TestHelper_GetValue() returned %d"), GettedValue);
 	}
 
 	{
-		int32 const GettedValue_UsingNativeFunction = Obj->TestHelper_GetValue_UseNativeFunction();
-		UE_LOG(PCLog, Display, TEXT("Obj->TestHelper_GetValue_UseNativeFunction() returned %d"), GettedValue_UsingNativeFunction);
+		int32 const GettedValue_UsingNativeFunction = ObjByIfc->TestHelper_GetValue_UseNativeFunction();
+		UE_LOG(PCLog, Display, TEXT("ObjByIfc->TestHelper_GetValue_UseNativeFunction() returned %d"), GettedValue_UsingNativeFunction);
 	}
 
 	{
@@ -208,8 +208,8 @@ void AMyPC::Test_ImplementationsInInterface()
 	}
 
 	{
-		int32 const GettedValue_UseMeInTestHelper = Obj->UseMeInTestHelper();
-		UE_LOG(PCLog, Display, TEXT("Obj->UseMeInTestHelper() returned %d"), GettedValue_UseMeInTestHelper);	
+		int32 const GettedValue_UseMeInTestHelper = ObjByIfc->UseMeInTestHelper();
+		UE_LOG(PCLog, Display, TEXT("ObjByIfc->UseMeInTestHelper() returned %d"), GettedValue_UseMeInTestHelper);	
 	}
 
 	UE_LOG(PCLog, Display, TEXT("AMyPC::Test_ImplementationsInInterface DONE"));
@@ -224,8 +224,8 @@ void AMyPC::Test_Casts()
 
 	{
 		// Casting interface pointer back to UObject:
-		UObject* const Obj = Cast<UObject>(InterfacePtr);
-		UE_LOG(PCLog, Display, TEXT("Cast<UObject>(InterfacePtr) returned \"%s\""), Obj ? TEXT("VALID") : TEXT("nullptr"));
+		UObject* const MyObj = Cast<UObject>(InterfacePtr);
+		UE_LOG(PCLog, Display, TEXT("Cast<UObject>(InterfacePtr) returned \"%s\""), MyObj ? TEXT("VALID") : TEXT("nullptr"));
 	}	
 
 	{

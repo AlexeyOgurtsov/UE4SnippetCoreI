@@ -38,7 +38,7 @@ public:
 	//UPROPERTY()
 	//IBaseInterface* BaseInstanceProp = nullptr;
 
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = InterfaceTest)
 	TScriptInterface<IBaseInterface> BaseInterfaceProp = nullptr;
 
 private:

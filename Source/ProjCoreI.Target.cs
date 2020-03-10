@@ -8,6 +8,7 @@ public class ProjCoreITarget : TargetRules
 	public ProjCoreITarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
 		ExtraModuleNames.AddRange( new string[] { "ProjCoreI" } );
 	}
 }
